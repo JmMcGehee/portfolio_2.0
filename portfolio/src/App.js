@@ -7,43 +7,55 @@ import { LinkedIn, GitHub, GitLab } from './assets'
 import './App.css'
 
 const App = () => {
+
+  const icons = [ GitLab, GitHub, LinkedIn ]
+
   return (
-    <div id="intro">
-      <Navbar color="info" dark>
-        <Container>
-          <NavbarBrand href="#">Joshua McGehee</NavbarBrand>
-          <Nav className="mr-auto">
-            {
-              navItems.map(nav => (
-                <NavItem key={ `${ nav.title } + ${ nav.alt }` }>
-                  <NavLink
-                    href={ nav.href }
-                    alt={ nav.alt }
-                    key={ nav.title }
-                  >{ nav.title }</NavLink>
-                </NavItem>
-              ))
-            }
-          </Nav>
-          <Nav>
-            <NavItem>
-              <NavLink>
-                <img src={ GitLab } alt="GitLab" height="30px"/></NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink>
-                <img src={ GitHub } alt="GitHub" height="30px"/>
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink>
-                <img src={ LinkedIn } alt="LinkedIn" height="30px"/>
-              </NavLink>
-            </NavItem>
-          </Nav>
+    <>
+    <div id="home" className="view">
+      <div className="mask rgba-black-strong">
+        <Navbar color="primary" dark>
+          <Container>
+            <NavbarBrand href="#">Joshua McGehee</NavbarBrand>
+            <Nav className="mr-auto">
+              {
+                navItems.map(nav => (
+                  <NavItem key={ `${ nav.title } + ${ nav.alt }` }>
+                    <NavLink
+                      href={ nav.href }
+                      alt={ nav.alt }
+                      key={ nav.title }
+                      className="text-secondary"
+                    >{ nav.title }</NavLink>
+                  </NavItem>
+                ))
+              }
+            </Nav>
+            <Nav>
+              {
+                icons.map(icon => (
+                  <NavItem>
+                    <NavLink>
+                      <img src={ icon } alt="#" height="30px"/>
+                    </NavLink>
+                  </NavItem>
+                ))
+              }
+            </Nav>
+          </Container>
+        </Navbar>
+        <Container fluid>
+
         </Container>
-      </Navbar>
+      </div>
     </div>
+    <div id="bio" height="700px">
+      <h1>ABOUT ME</h1>
+    </div>
+    <div id="projects" height="700px">
+      <h1>PROJECTS</h1>
+    </div>
+    </>
   )
 }
 export default App

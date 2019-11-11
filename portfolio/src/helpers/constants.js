@@ -1,22 +1,22 @@
 const navItems = [
   {
     title: 'Home',
-    href:'/home',
+    href:'#home',
     atl:'home',
   },
   {
     title: 'Bio',
-    href:'/bio',
+    href:'#bio',
     atl:'bio',
   },
   {
     title: 'Projects',
-    href:'/prjects',
+    href:'#projects',
     atl:'projects',
   },
   {
     title: 'Contact',
-    href:'/contact',
+    href:'#contact',
     atl:'contact',
   },
 ]
