@@ -3,6 +3,7 @@ import { Container, Nav, Navbar, NavItem, NavLink, NavbarBrand } from 'reactstra
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLink } from '@fortawesome/free-solid-svg-icons'
 import { navItems } from './helpers/constants'
+import { LinkedIn, GitHub, GitLab } from './assets'
 import './App.css'
 
 const App = () => {
@@ -26,14 +27,20 @@ const App = () => {
           </Nav>
           <Nav>
             <NavItem>
-              <FontAwesomeIcon icon={ faLink } />
+              <NavLink>
+                <img src={ GitLab } alt="GitLab" height="30px"/></NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink>
+                <img src={ GitHub } alt="GitHub" height="30px"/>
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink>
+                <img src={ LinkedIn } alt="LinkedIn" height="30px"/>
+              </NavLink>
             </NavItem>
           </Nav>
-          <form className="form-inline">
-            <div className="md-form my-0">
-              <input className="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" />
-            </div>
-          </form>
         </Container>
       </Navbar>
     </div>
