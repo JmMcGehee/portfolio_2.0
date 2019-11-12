@@ -1,10 +1,8 @@
 import React from 'react'
-import { Container, Nav, Navbar, NavItem, NavLink, NavbarBrand } from 'reactstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLink } from '@fortawesome/free-solid-svg-icons'
+import { Container, Nav, Navbar, NavItem, NavLink, NavbarBrand, Row, Col } from 'reactstrap'
 import { navItems } from './helpers/constants'
 import { LinkedIn, GitHub, GitLab } from './assets'
-import './App.css'
+import './styles/App.scss'
 
 const App = () => {
 
@@ -16,7 +14,7 @@ const App = () => {
       <div className="mask rgba-black-strong">
         <Navbar color="primary" dark>
           <Container>
-            <NavbarBrand href="#">Joshua McGehee</NavbarBrand>
+            <NavbarBrand href="#intro">Joshua McGehee</NavbarBrand>
             <Nav className="mr-auto">
               {
                 navItems.map(nav => (
@@ -44,13 +42,18 @@ const App = () => {
             </Nav>
           </Container>
         </Navbar>
-        <Container fluid>
-
-        </Container>
       </div>
     </div>
-    <div id="bio" height="700px">
-      <h1>ABOUT ME</h1>
+    <div id="intro" className="view">
+      <Container>
+        <Row className="justify-content-center">
+          <Col className={ 'align-self-center' }>
+            <h3 className="display-3 text-white">Joshua McGehee</h3>
+            <hr />
+            <h4 className="subtext-header text-white">Full-Stack Developer</h4>
+          </Col>
+        </Row>
+      </Container>
     </div>
     <div id="projects" height="700px">
       <h1>PROJECTS</h1>
