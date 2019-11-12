@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Nav, Navbar, NavItem, NavLink, NavbarBrand, Row, Col } from 'reactstrap'
 import { navItems } from './helpers/constants'
-import { LinkedIn, GitHub, GitLab } from './assets'
+import { LinkedIn, GitHub, GitLab, ProfilePic } from './assets'
 import './styles/App.scss'
 
 const App = () => {
@@ -11,7 +11,7 @@ const App = () => {
   return (
     <>
     <div id="home" className="view">
-      <div className="mask rgba-black-strong">
+      <div className="">
         <Navbar color="primary" dark>
           <Container>
             <NavbarBrand href="#intro">Joshua McGehee</NavbarBrand>
@@ -45,17 +45,30 @@ const App = () => {
       </div>
     </div>
     <div id="intro" className="view">
-      <Container>
-        <Row className="justify-content-center">
-          <Col className={ 'align-self-center' }>
-            <h3 className="display-3 text-white">Joshua McGehee</h3>
+      <Container fluid className="px-3 py-5 d-flex justify-content-center">
+        <Row>
+          <Col>
+            <h3 className="display-3 font-weight-bold text-white pt-5">Joshua McGehee</h3>
             <hr />
-            <h4 className="subtext-header text-white">Full-Stack Developer</h4>
+            <h4 className="subtext-header text-white pb-5">Full-Stack Developer</h4>
           </Col>
         </Row>
       </Container>
     </div>
-    <div id="projects" height="700px">
+    <div id="bio">
+      <Container fluid className="bg-primary">
+        <h1>ABOUT ME</h1>
+        <hr />
+        <div class="avatar mx-auto mb-4">
+          <img
+            src={ ProfilePic }
+            height="300px"
+            class="rounded-circle"
+            alt="profile_pic"/>
+          </div>
+      </Container>
+    </div>
+    <div id="projects">
       <h1>PROJECTS</h1>
     </div>
     </>
